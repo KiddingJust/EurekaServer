@@ -1,0 +1,21 @@
+#spring:
+#  application:
+#    name: eureka-server
+#server:
+#  port: 8761
+#eureka:
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#
+#   
+##management:
+##  endpoints:
+##    web:
+##      exposure:
+##        include: "*"
+##  endpoint:
+##    shutdown:
+##      enabled: true
+##    health:
+##      show-details: ALWAYS

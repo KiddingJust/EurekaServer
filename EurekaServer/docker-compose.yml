@@ -1,0 +1,50 @@
+version: '3'
+services:
+  eureka-server:
+    image: 'eureka-server'
+    ports:
+      - '8761:8761'
+    networks:
+      - msa-network
+    environment:
+      - EUREKA_SERVER_NAME=eureka-server
+      - PORT=8761
+#  service-a:
+#    image: 'service-a'
+#    ports:
+#      - '8800:8800'
+#    networks:
+#      - msa-network
+#    environment:
+#      - EUREKA_SERVER_NAME=eureka-server
+#      - EUREKA_SERVER_PORT=8761
+#      - PORT=8800
+#    depends_on:
+#      - eureka-server 
+networks:
+  msa-network:
+
+#      
+#  service-b:
+#    image: 'service-b'
+#    ports:
+#      - '8900:8900'
+#    environment:
+#      - EUREKA_SERVER_NAME=eureka-server
+#      - EUREKA_SERVER_PORT=8761
+#      - PORT=8900
+#    links:
+#      - eureka-server 
+#      
+#  zuul-api-gateway:
+#    image: 'zuul-api-gateway'
+#    ports:
+#      - '8888:8888'
+#    environment:
+#      - EUREKA_SERVER_NAME=eureka-server
+#      - EUREKA_SERVER_PORT=8761
+#      - PORT=8888
+#    links:
+#      - eureka-server
+#      - service-a
+#      - service-b
